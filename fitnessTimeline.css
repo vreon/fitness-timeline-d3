@@ -1,0 +1,66 @@
+.chart text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+.chart .entry.weight line {
+  stroke: #fb8c00;
+  stroke-width: 1;
+}
+.chart .entry.weight text {
+  font-weight: bold;
+  fill: #fb8c00;
+  text-anchor: end;
+}
+.chart .entry.diary.surplus .goal {
+  stroke: #f44336;
+}
+.chart .entry.diary.surplus .net {
+  fill: #f44336;
+}
+.chart .entry.diary.surplus .bar .food {
+  fill: #ef9a9a;
+}
+.chart .entry.diary.surplus .bar .exercise {
+  fill: #ffebee;
+}
+.chart .entry.diary.deficit .goal {
+  stroke: #4caf50;
+}
+.chart .entry.diary.deficit .net {
+  fill: #4caf50;
+}
+.chart .entry.diary.deficit .bar .food {
+  fill: #a5d6a7;
+}
+.chart .entry.diary.deficit .bar .exercise {
+  fill: #e8f5e9;
+}
+.chart .entry.diary text {
+  text-anchor: end;
+}
+.chart .entry.diary .date {
+  fill: #000;
+  opacity: 0.38;
+}
+.chart .entry.diary .goal {
+  stroke-width: 1;
+}
+.chart .entry.lacuna line {
+  stroke: #000;
+  opacity: 0.2;
+  stroke-width: 1;
+  stroke-dasharray: 2, 5;
+}
+.chart .entry.lacuna text {
+  fill: #000;
+  opacity: 0.38;
+  text-anchor: end;
+}
+.chart .graph.weight .line {
+  stroke: #fb8c00;
+  stroke-width: 2;
+  fill: transparent;
+}
+.chart .graph.weight .area {
+  fill: rgba(251,140,0,0.1);
+}

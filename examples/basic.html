@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Fitness Timeline - Basic Example</title>
+        <link rel="stylesheet" type="text/css" href="../fitnessTimeline.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            body {
+                background: #fafafa;
+                font: 14px normal "Roboto", sans-serif;
+            }
+            .chart {
+                display: block;
+                padding: 20px;
+                margin: 0 auto;
+            }
+            .chart text {
+                font-family: "Roboto", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script type="text/javascript" src="../fitnessTimeline.js"></script>
+        <script type="text/javascript">
+            var data = [
+                {"type": "weight", "goal": 180, "value": 200},
+                {"type": "diary", "date": "2015-01-01", "goal": 2000, "food": 1950, "exercise": 0},
+                {"type": "lacuna", "date": "2015-01-02"},
+                {"type": "diary", "date": "2015-01-03", "goal": 2000, "food": 2200, "exercise": 450},
+                {"type": "diary", "date": "2015-01-04", "goal": 2000, "food": 2300, "exercise": 200},
+                {"type": "weight", "goal": 180, "value": 199},
+                {"type": "diary", "date": "2015-01-05", "goal": 2000, "food": 2100, "exercise": 400},
+                {"type": "diary", "date": "2015-01-06", "goal": 2000, "food": 1920, "exercise": 0},
+                {"type": "diary", "date": "2015-01-07", "goal": 2000, "food": 2000, "exercise": 350},
+                {"type": "diary", "date": "2015-01-08", "goal": 2000, "food": 1950, "exercise": 0},
+                {"type": "diary", "date": "2015-01-09", "goal": 2000, "food": 1960, "exercise": 400},
+                {"type": "diary", "date": "2015-01-10", "goal": 2000, "food": 1980, "exercise": 0},
+                {"type": "weight", "goal": 180, "value": 197}
+            ];
+
+            var chart = fitnessTimeline();
+            var svg = d3.select("body").append("svg")
+                .attr("class", "chart")
+                .datum(data)
+                .call(chart);
+        </script>
+    </body>
+</html>
