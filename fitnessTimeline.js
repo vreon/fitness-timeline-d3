@@ -16,14 +16,14 @@ function fitnessTimeline() {
   var dateDisplayFormat = "%d %b";
   var numberDisplayFormat = ",d";
 
-  var parseDate = d3.time.format(dateParseFormat).parse;
-  var formatDate = d3.time.format(dateDisplayFormat);
-  var formatNumber = d3.format(numberDisplayFormat);
-
   // For shifting text from its baseline to its middle
   var textMiddle = ".35em";
 
   function chart(selection) {
+    var parseDate = d3.time.format(dateParseFormat).parse;
+    var formatDate = d3.time.format(dateDisplayFormat);
+    var formatNumber = d3.format(numberDisplayFormat);
+
     selection.each(function(data) {
       var lastWeight = null;
 
